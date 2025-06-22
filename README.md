@@ -1,5 +1,5 @@
 # NeuScan-Model-PCSHSL
-## 🔽 Download Pre-trained Model & Config
+## 🧠 Download Pre-trained Model & Config
 
 Download the `.zip` file containing the trained PyTorch model and config:
 
