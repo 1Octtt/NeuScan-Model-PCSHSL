@@ -1,22 +1,30 @@
 # NeuScan-Model-PCSHSL
-# 🧠 Pre-trained Model — Download as ZIP
+## 🔽 Download Pre-trained Model & Config
 
-This project uses a pre-trained PyTorch model (`.pth`) file. Due to GitHub's 100MB limit, the model is stored externally on Google Drive as a ZIP file.
+Download the `.zip` file containing the trained PyTorch model and config:
 
----
+📁 [Download model_files.zip](https://drive.google.com/drive/folders/1PhvkV6lQEvJVd1gQcbR4RdcuQe_d57B5?usp=sharing)
 
-## 📁 Download the Model
+**Files included:**
+- `model.pth` – Trained PyTorch model
+- `config.json` – Model configuration or label mapping
 
-Please download the model ZIP file from the link below:
+### 🧭 How to use:
 
-🔗 [Download model_files.zip (Google Drive)](https://drive.google.com/drive/folders/1PhvkV6lQEvJVd1gQcbR4RdcuQe_d57B5?usp=sharing)
+1. Download and extract `model_files.zip`
+2. Place files in your project (e.g., `./model_checkpoints/` or as needed)
+3. Load them in your code like so:
 
-> The ZIP file contains the trained model `.pth` file and other necessary components (if any).
+```python
+import torch
+import json
+from your_model import YourModel  # Replace with actual model class
 
----
+# Load model
+model = YourModel()
+model.load_state_dict(torch.load("model_checkpoints/model.pth", map_location="cpu"))
+model.eval()
 
-## 📦 How to Use
-
-1. Download the ZIP file from the link above.
-2. Extract the ZIP file.
-3. You will get a file like this:
+# Load config or labels
+with open("model_checkpoints/config.json", "r") as f:
+    config = json.load(f)
