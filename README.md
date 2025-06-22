@@ -7,7 +7,7 @@ Download the `.zip` file containing the trained PyTorch model and config:
 
 **Files included:**
 - `model.pth` – Trained PyTorch model
-- `config.json` – Model configuration or label mapping
+- `metrics.json` – Evaluation results (e.g., accuracy, loss)
 
 ### 🧭 How to use:
 
